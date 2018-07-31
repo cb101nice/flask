@@ -1,0 +1,27 @@
+{% extends "base_form.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <p>Let's see how you performed!</p>
+    {% if username != username.lower() and username != username.upper() and username[-1].isdigit() %}
+    <p>Your username passed the 3 requirements!</p>
+    {% else %}
+    <p>Looks like you had issues with your username!</p>
+    <p>Here are the requirements you failed.</p>
+    <ul>
+        {% if username == username.lower() %}
+        <li>You did not use an uppercase character.</li>
+        {% endif %}
+        {% if username == username.upper() %}
+        <li>You did not use an lowercase character</li>
+        {% endif %}
+        {% if username[-1].isdigit() == False %}
+        <li>You did not use a number.</li>
+        {% endif %}
+    </ul>
+   
+
+   {% endif %}
+
+</div>
+{% endblock %}

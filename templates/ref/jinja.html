@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>
+A Simple HTML Document
+</title>
+</head>
+<body>
+<p>This is a very simple HTML document</p>
+<h1>
+    {{mylist}}
+</h1>
+<ul>
+    {% for pup in puppies %}
+        <li>{{pup}}</li>
+    {% endfor %}
+</ul>
+
+{% if 'Rufus' in puppies %}
+    <p>Found you Rufus!</p>
+{% else %}
+    <p>Not</p>
+{% endif %}
+<p>It only has two paragraphs</p>
+</body>
+</html>

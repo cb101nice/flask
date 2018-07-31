@@ -1,0 +1,19 @@
+{% extends "base_form.html" %}
+
+{% block content%}
+<div class="jumbotron">
+    <p>Welcome to the Puppy name check!</p>
+    <p>Fill out the form below with a name that has these restrains</p>
+    <ul>
+        <li>an upper case</li>
+        <li>a lower case</li>
+        <li>a number at the end</li>
+    </ul>
+   <form action="{{url_for('name_check_che')}}">
+       <label for="name">Username:</label>
+       <input type="text" name="username">
+       <input type="submit" value="Submit Form">
+   </form>
+
+</div>
+{% endblock %}
